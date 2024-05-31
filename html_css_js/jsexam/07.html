@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a) {
+        console.log("a+a");
+        return a + a;
+      }
+
+      function add(a, b) {
+        console.log("a+b");
+        return a + b;
+      }
+      //자바스크립트 메소드가 오버로딩되지 않아요.
+      //add(a), add(a,b) 가  구분되지 않는다.
+      //나중에 선언된 add만 실행되요.
+      add(3);
+      add(3, 5);
+      add();
+      add(12, 3, 4, 5, 23);
+      add(2, 232, 44, 5, 6, 7, 77, 7777);
+
+      function add(a, b, c) {
+        console.log(arguments.length);
+        console.log("1번째 매개변수 값:::" + arguments[0]);
+      }
+
+      function hello(name) {
+        console.log(`Hello, ${name}!`);
+      }
+
+      hello("carami ");
+    </script>
+  </body>
+</html>

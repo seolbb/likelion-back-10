@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let a = 10;
+      //   let b = "test";
+
+      //자바스크립트의 함수는 일급객체로 취급된다!!!
+      //함수도 타입이 될 수 있다.
+      function test() {
+        console.log("test");
+      }
+
+      //   let c = test;
+
+      function c(abc) {
+        //함수의 매개변수로 함수를 받을 수 있다.
+        return abc;
+      }
+
+      let ttt = c(test);
+
+      console.log(ttt);
+
+      c(test)();
+    </script>
+  </body>
+</html>

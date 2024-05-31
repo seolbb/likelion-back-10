@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비동기</title>
+  </head>
+  <body>
+    <script>
+      function increaseAndPrint(n, callback) {
+        setTimeout(() => {
+          const increased = n + 1;
+          console.log(increased);
+          if (callback) {
+            callback(increased);
+          }
+        }, 1000);
+      }
+
+      increaseAndPrint(0, (n) => {
+        increaseAndPrint(n, (n) => {
+          increaseAndPrint(n, (n) => {
+            increaseAndPrint(n, (n) => {
+              increaseAndPrint(n, (n) => {
+                console.log("끝!");
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

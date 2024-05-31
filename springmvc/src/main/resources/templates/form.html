@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<h1>폼 검증 예제입니다.</h1>
+<form method="post" th:action="@{/submitForm}" th:object="${userForm}">
+    <label for="username">username : </label>
+    <input type="text" th:field="*{username}" id="username">
+    <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+<br>
+
+    <label for="password">password : </label>
+    <input type="text" th:field="*{password}" id="password">
+    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+<br>
+
+    <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>

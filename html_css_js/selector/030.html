@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors</title>
+    <style>
+      ul {
+        width: 200px;
+        background: #292929;
+        color: white;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        padding: 10px;
+        border-bottom: 1px solid black;
+        border-top: 1px solid #3c3c3c;
+      }
+      li:first-child {
+        border-top: none;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+      ul:first-of-type li:nth-last-child(1) {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>My paragraph here.</p>
+      <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <ul>
+          <li>List Item 3</li>
+          <li>List Item 4</li>
+        </ul>
+      </ul>
+
+      <ul>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+      </ul>
+    </div>
+  </body>
+</html>

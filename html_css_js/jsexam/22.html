@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단축평가</title>
+  </head>
+  <body>
+    <script>
+      /*
+      1. 논리 연산자를 사용한 단축 평가
+      논리 AND(&&): 첫 번째 피연산자가 true로 평가되면,
+          두 번째 피연산자의 값을 반환합니다. 그렇지 않으면 첫 번째 피연산자의 값을 반환합니다.
+      논리 OR(||): 첫 번째 피연산자가 false로 평가되면, 두 번째 피연산자의 값을 반환합니다. 그렇지 않으면 첫 번째 피연산자의 값을 반환합니다.
+      논리 Nullish(??): 첫 번째 피연산자가 null이나 undefined가 아니면,
+          첫 번째 피연산자의 값을 반환합니다. 그렇지 않으면 두 번째 피연산자의 값을 반환합니다.
+      2. 조건부(삼항) 연산자
+      삼항 연산자(조건 ? 표현식1 : 표현식2): 조건이 true로 평가되면 표현식1을,
+      그렇지 않으면 표현식2를 실행합니다.
+      3. 할당 연산자를 이용한 단축
+      할당과 동시에 연산하는 연산자: +=, -=, *=, /=, %= 등을 사용하여
+      값을 업데이트하면서 할당할 수 있습니다.
+
+      */
+
+      const food = { foodName: "피자" };
+
+      function getFoodName(food) {
+        if (!food) return "아무거나";
+        return food.foodName;
+      }
+
+      console.log(getFoodName(food));
+
+      const food2 = null;
+      console.log(getFoodName(food2));
+
+      function getFoodName(food) {
+        return food && food.foodName;
+      }
+      console.log("=========================");
+      console.log(true && "hello");
+      console.log(false && "hello");
+
+      console.log(true || "hello");
+      console.log(false || "hello");
+      console.log("=========================");
+      //아래 값들을 자바스크립트는 false라고 판단한다.
+      console.log("" || "hello");
+      console.log(0 || "hello");
+      console.log(null || "hello");
+      console.log(undefined || "hello");
+
+      console.log("a" || "hello");
+      console.log(1 || "hello");
+      console.log("=========================");
+      let a;
+      let b = null;
+      let c = undefined;
+      let d = 4;
+      let e = "test";
+
+      let f = a || b || c || d || e;
+
+      console.log(f);
+
+      const name = null;
+
+      const userName = name || "guest";
+
+      console.log(userName);
+
+      console.log("=========================");
+
+      //?? 거짓을 판단하는 기준이 단지 값으로만..
+
+      console.log("" ?? "hello");
+      console.log(0 ?? "hello");
+      console.log(null ?? "hello");
+      console.log(undefined ?? "hello");
+
+      console.log("a" ?? "hello");
+      console.log(1 ?? "hello");
+    </script>
+  </body>
+</html>

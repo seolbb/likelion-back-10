@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      varScopeTest();
+      letScopetest();
+      console.log(v1);
+
+      //   sum();
+
+      //   console.log(let1);
+      //변수  상수
+      //var  --  변수, 상수.. 뭐든 다 썼다..  ES6 이후에는 지양하고있다.
+      //let --   변수 , const  -- 상수
+
+      //ES6에서 var 보다는 let,const를 사용하기를 권장하는 이유!!
+      //1. var 중복선언이 가능하다!!
+      //2. 호이스팅 된다.
+      //3. 변수의 scope  - var 함수단위!!
+      var v1 = 0;
+
+      var v1 = 10; //중복선언!!
+
+      console.log(v1);
+
+      //let -  중복선언 불가능
+      //let - 호이스팅되지 않는다!!
+      //let - block 단위
+      //const 도 let과 같다.  상수라는 점만 다르다.
+
+      let let1 = 0;
+
+      //   let let1 = 10;
+      //function 으로 선언된 함수도 호이스팅된다!!!!
+      function varScopeTest() {
+        if (true) {
+          var varScope = 10;
+        }
+        console.log("varScope:::" + varScope);
+      }
+
+      varScopeTest();
+
+      function letScopetest() {
+        if (true) {
+          let letScope = 10;
+        }
+        // console.log(letScope); 사용불가
+      }
+
+      letScopetest();
+
+      console.log(let1);
+
+      const sum = function () {
+        console.log("나는 sum()함수입니다.");
+      };
+
+      sum();
+
+      let value = 10;
+      value = 20;
+
+      const cvalue = 20;
+      //   cvalue = 30;    상수이므로, 값을 바꿀 수 없다.
+    </script>
+  </body>
+</html>

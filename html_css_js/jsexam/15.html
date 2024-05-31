@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const todos = [
+        {
+          id: 1,
+          text: "자바스크립트 입문",
+          done: false,
+        },
+        {
+          id: 2,
+          text: "함수 배우기",
+          done: true,
+        },
+        {
+          id: 3,
+          text: "객체와 배열 배우기",
+          done: true,
+        },
+        {
+          id: 4,
+          text: "배열 내장함수 배우기",
+          done: false,
+        },
+      ];
+      const index = todos.findIndex((todo) => todo.id === 3);
+      console.log(index);
+
+      const todo = todos.find((todo) => todo.id === 3);
+      console.log(todo);
+
+      const falseTodos = todos.filter((todo) => todo.done === false);
+
+      console.log(falseTodos);
+
+      todos.splice(1, 2);
+      console.log(todos);
+
+      const numbers = [1, 2, 3, 4, 5];
+      const sliceNumbers = numbers.splice(0, 3);
+      console.log(numbers);
+      console.log(sliceNumbers);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async/await</title>
+  </head>
+  <body>
+    <script>
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function process() {
+        console.log("안녕하세요");
+        await sleep(3000); //비동기
+        console.log("반갑습니다.");
+      }
+      // function process() {
+      //   console.log("안녕하세요");
+      //   sleep(3000).then(() => {
+      //     console.log("반갑습니다.");
+      //   });
+      // }
+
+      console.log("proceess 호출 전!!");
+      process().then(() => {
+        console.log("작업이 모두 끝났어요~~");
+      });
+      console.log("proceess 호출 후!!");
+    </script>
+  </body>
+</html>

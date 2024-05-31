@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Example</title>
+</head>
+<body>
+<h1>List Example</h1>
+<ul>
+    <!-- th:each의 status 변수 사용, index 범위 조정 -->
+    <li
+            th:each="item, stat : ${items}"
+            th:if="${stat.index >= 3 and stat.index < 9}"
+            th:text="${item}"
+    >
+        <!-- 아이템 출력 -->
+    </li>
+</ul>
+</body>
+</html>

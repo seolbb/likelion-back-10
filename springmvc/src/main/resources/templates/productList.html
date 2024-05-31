@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product List</title>
+</head>
+<body>
+<h1>Product List</h1>
+
+<table>
+    <tr>
+        <th>상품아이디</th>
+        <th>상품명</th>
+        <th>상품가격</th>
+    </tr>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+    </tr>
+</table>
+
+<ul>
+    <li th:each="product: ${products}" th:text="${product.name}+' - $'+${product.price}"></li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!--<ul>-->
+<!--    <li th:each="product : ${products}" th:text="${product.name}">Product Name</li>-->
+<!--</ul>-->
+
+<!--<!DOCTYPE html>&ndash;&gt;-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>productList</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1 th:text="Product List"></h1>-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <th>상품아이디</th>-->
+<!--            <th>상품명</th>-->
+<!--            <th>상품가격</th>-->
+<!--        </tr>-->
+<!--        <tr th:each="product : ${products}">-->
+<!--            <td th:text="${product.id}"></td>-->
+<!--            <td th:text="${product.name}"></td>-->
+<!--            <td th:text="${product.price}"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+
+
+
+<!--    <div th:include="common/footer :: footer"></div>-->
+<!--</body>-->
+<!--</html>-->

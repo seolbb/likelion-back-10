@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try/catch</title>
+  </head>
+  <body>
+    <script>
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function makeError() {
+        await sleep(1000);
+        // const error = new Error();
+        // throw error;
+        console.log("1초 기다렸다가 해야하는 일을 여기에...");
+      }
+
+      async function process() {
+        try {
+          await makeError();
+          console.log("makeError의 실행이 끝난 후에 할 일은 여기에.");
+        } catch (e) {
+          console.error(e);
+        }
+      }
+
+      console.log("start!!");
+      process();
+      console.log("end");
+    </script>
+  </body>
+</html>

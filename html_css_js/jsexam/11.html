@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      const array = [1, 2, 3, 4, 5];
+
+      console.log(array);
+
+      console.log(array[0]);
+      array[2] = "test";
+
+      console.log(array);
+
+      const array2 = new Array(10); //값이 1개만 들어가면 그 크기의 배열을 생성.
+      console.log(array2);
+
+      const array3 = new Array(10, 2); //값이 1개만 들어가면 그 크기의 배열을 생성.
+      console.log(array3);
+
+      array[0] = { name: "kang" };
+      console.log(array);
+
+      array.push(10);
+      console.log(array);
+
+      array.push(() => console.log("hello array!"));
+      console.log(array);
+
+      array[6]();
+
+      const [a, h, j, b, c, d, e, f] = array; //배열 비구조할당
+
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      console.log(d);
+      console.log(e);
+      console.log(h);
+    </script>
+  </body>
+</html>

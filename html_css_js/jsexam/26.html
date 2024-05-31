@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비동기</title>
+  </head>
+  <body>
+    <script>
+      function work() {
+        setTimeout(() => {
+          //   const start = Date.now();
+          //   for (let i = 0; i < 1000000000; i++) {}
+          //   const end = Date.now();
+          //   console.log(end - start + "ms");
+          console.log("작업완료!!!!!");
+        }, 0);
+        // console.log("work end!!");
+      }
+
+      console.log("start!!");
+      work();
+      console.log("next work");
+    </script>
+  </body>
+</html>

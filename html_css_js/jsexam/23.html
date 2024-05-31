@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단축평가</title>
+  </head>
+  <body>
+    <script>
+      let oldName = "송아지";
+      let newName = "송수한";
+
+      if (newName) {
+        oldName = newName;
+      }
+
+      newName && (oldName = newName);
+
+      newName &&= oldName;
+
+      const person = { age: 0, name: "" };
+
+      person.age ??= 21;
+
+      console.log(person);
+
+      person.name ||= "carami";
+
+      console.log(person);
+
+      function makeObj(obj) {
+        obj.name ??= "guest";
+        obj.age ??= 20;
+        return obj;
+      }
+
+      console.log(makeObj({}));
+      console.log(makeObj({ name: "carami" }));
+      console.log(makeObj(person));
+    </script>
+  </body>
+</html>

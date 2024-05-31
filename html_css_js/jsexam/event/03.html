@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+  </head>
+  <body>
+    <button>클릭</button>
+    <button>클릭</button>
+
+    <script>
+      //   function changeColor(event) {
+      const changeColor = (event) => {
+        console.log(event);
+        console.log("event target ::: " + this);
+        console.log(this);
+        console.log(event.target);
+        /*function  으로 함수를 생성했을때  this 와 같은 값을 얻어냄. */
+
+        // const color = prompt("색을 입력하세요.");
+        document.body.style.backgroundColor = "rgb(3, 255, 33)";
+      };
+
+      const btnList = document.getElementsByTagName("button");
+      console.log(btnList);
+
+      const btnclk = document.querySelectorAll("button");
+      //   console.log(btnclk[1]);
+      for (let i = 0; i < btnclk.length; i++) {
+        btnclk[i].addEventListener("click", changeColor);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+2024-05-30 11:10:35 [main] INFO  o.e.s.SpringdatajpaApplication - Starting SpringdatajpaApplication using Java 21.0.3 with PID 13699 (/Users/seolb/Documents/likelion/springdatajpa/out/production/classes started by seolb in /Users/seolb/Documents/likelion/springdatajpa)
+2024-05-30 11:10:35 [main] INFO  o.e.s.SpringdatajpaApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 11:10:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-30 11:10:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interface.
+2024-05-30 11:10:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-30 11:10:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15d0d6c9
+2024-05-30 11:10:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-30 11:10:37 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-30 11:10:37 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-05-30 11:10:37 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-30 11:10:38 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-30 11:10:39 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-30 11:10:39 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:10:40 [main] INFO  o.e.s.SpringdatajpaApplication - Started SpringdatajpaApplication in 5.572 seconds (process running for 7.907)
+2024-05-30 11:10:40 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 추가 : hong
+2024-05-30 11:10:40 [main] INFO  o.e.s.SpringdatajpaApplication - 사용자 삭제 : hong
+2024-05-30 11:10:40 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 11:10:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-30 11:10:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>친구정보 수정</title>
+</head>
+<body>
+<h1>친구정보 수정</h1>
+<form th:action="@{/friends/edit}"  th:object="${friend}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <label for="name">Name :</label>
+    <input type="text" id="name" th:field="*{name}" required/>
+
+    <label for="email">Email :</label>
+    <input type="text" id="email" th:field="*{email}" required />
+    <input type="submit" value="친구정보수정">
+</form>
+</body>
+</html>

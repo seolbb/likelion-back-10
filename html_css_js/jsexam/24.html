@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단축평가</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "carami",
+        job: {
+          title: "student",
+          manager: {
+            name: "kang",
+          },
+        },
+      };
+
+      function printManagerName(person) {
+        console.log(person.job.manager.name);
+      }
+
+      function printManagerName(person) {
+        console.log(
+          person && person.job && person.job.manager && person.job.manager.name
+        );
+      }
+
+      //?.
+      function printManagerName(person) {
+        console.log(person?.job?.manager?.name);
+      }
+
+      printManagerName(person);
+
+      const kang = { name: "강경미" };
+      printManagerName(kang);
+
+      const kim = {
+        name: "kim",
+        adimin() {
+          console.log("관리자입니다.");
+        },
+      };
+      //?.()
+      kim.adimin?.();
+      kang.admin?.();
+
+      //?.[]
+      console.log(person?.["name"]);
+      const hong = {};
+      console.log(hong?.["name"]);
+    </script>
+  </body>
+</html>

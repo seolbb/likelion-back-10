@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 일반적인 폼 -->
+    <form action="/submit-form" method="post">
+      <label for="username">사용자 이름:</label>
+      <input type="text" id="username" name="username" /><br />
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" name="password" /><br />
+      <input type="submit" value="제출" />
+    </form>
+
+    <hr />
+    <!-- 파일 업로드 폼 -->
+    <form action="/upload-file" method="post" enctype="multipart/form-data">
+      <label for="file">파일 선택:</label>
+      <input type="file" id="file" name="file" /><br />
+      <label>글쓰기</label>
+      <textarea rows="20"> </textarea>
+      <input type="submit" value="업로드" />
+    </form>
+
+    <hr />
+    <!-- 검색 폼 -->
+    <form action="/search" method="get">
+      <label for="search">검색어:</label>
+      <input type="text" id="search" name="q" />
+      <input type="submit" value="검색" />
+
+      <select name="cars">
+        <option value="1">모닝</option>
+        <option value="2">티코</option>
+      </select>
+    </form>
+
+    <hr />
+    <!-- 로그인 폼 -->
+    <form action="/login" method="post">
+      <fieldset>
+        <legend>로그인정보</legend>
+        <label for="login-username">사용자 이름:</label>
+        <input type="text" id="login-username" name="username" /><br />
+        <label for="login-password">비밀번호:</label>
+        <input type="password" id="login-password" name="password" /><br />
+        <input type="submit" value="로그인" />
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: friendexam
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/examplesdb
+    username: seolb
+    password: seolb1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 80

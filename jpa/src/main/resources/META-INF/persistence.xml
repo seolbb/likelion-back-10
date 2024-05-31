@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <!-- persistence-unit 는 여러개 들어올 수 있다. name을 다르게 해서 관리가 가능하다. -->
+    <persistence-unit name="UserPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>org.example.jpa.User</class>  <!-- Add this line -->
+        <class>org.example.jpa.schoolexam.School</class>
+        <class>org.example.jpa.schoolexam.Student</class>
+        <class>org.example.jpa.bookexam.Author</class>
+        <class>org.example.jpa.bookexam.Book</class>
+        <class>org.example.jpa.emplexam.Employee</class>
+        <class>org.example.jpa.emplexam.Project</class>
+        <class>org.example.jpa.personexam.Person</class>
+        <class>org.example.jpa.personexam.Passport</class>
+        <class>org.example.jpa.vehicleexam.Car</class>
+        <class>org.example.jpa.vehicleexam.Truck</class>
+        <class>org.example.jpa.vehicleexam.Car2</class>
+        <class>org.example.jpa.vehicleexam.Truck2</class>
+        <class>org.example.jpa.vehicleexam.Car3</class>
+        <class>org.example.jpa.vehicleexam.Truck3</class>
+        <class>org.example.jpa.addressexam.Company</class>
+        <class>org.example.jpa.hrexam.Country</class>
+        <class>org.example.jpa.hrexam.Region</class>
+        <properties>
+            <!-- 데이터 소스에 알려줄 정보 -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/examplesdb"/>
+            <property name="jakarta.persistence.jdbc.user" value="seolb"/>
+            <property name="jakarta.persistence.jdbc.password" value="seolb1234"/>
+
+            <!-- 하이버네이트에 알려줄 속성 -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

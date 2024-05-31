@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스</title>
+  </head>
+  <body>
+    <script>
+      function Animal(type, name, sound) {
+        this.type = type;
+        this.name = name;
+        this.sound = sound;
+        this.say = function () {
+          console.log(this.sound);
+        };
+      }
+
+      const dog = new Animal("개", "멍멍이", "멍멍");
+      const cat = new Animal("고양이", "야옹이", "야옹");
+
+      dog.say();
+
+      cat.hi = function () {
+        console.log("hi~~~!!");
+      };
+
+      cat.age = 10;
+
+      cat.hi();
+      //   dog.hi();
+
+      console.log(cat.age);
+
+      cat.say = function () {
+        console.log("hahaha");
+      };
+
+      cat.say();
+      dog.say();
+    </script>
+  </body>
+</html>

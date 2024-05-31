@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend List</title>
+    <link rel="stylesheet" th:href="@{/css/friend.css}">
+</head>
+<body>
+<h1>Friend List</h1>
+<table th:if="${!friends.empty}">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="friend : ${friends}">
+        <td th:text="${friend.id}"></td>
+        <td>
+            <a th:href="@{/friends/{id} (id=${friend.id})}"  th:text="${friend.name}"></a>
+        </td>
+        <td th:text="${friend.email}"></td>
+    </tr>
+    </tbody>
+</table>
+<div th:if="${friends.totalPages} > 1">
+    <ul>
+        <li th:each="i : ${#numbers.sequence(1, friends.totalPages)}"> <!-- 약속된 문장들..-->
+            <a th:href="@{/friends(page=${i})}" th:text="${i}"></a>
+        </li>
+    </ul>
+</div>
+<a th:href="@{/friends/add}">친구등록</a>
+</body>
+</html>

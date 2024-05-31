@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const superheroes = [
+        "아이언맨",
+        "캡틴 아메리카",
+        "토르",
+        "닥터 스트레인지",
+      ];
+      console.log(superheroes);
+
+      const hi = function (name) {
+        console.log("hi" + name);
+      };
+      superheroes.forEach(hi);
+
+      superheroes.forEach(function (name) {
+        console.log("hi" + name);
+      });
+
+      superheroes.forEach((name) => console.log("hi" + name));
+    </script>
+  </body>
+</html>

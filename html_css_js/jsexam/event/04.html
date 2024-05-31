@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>클릭</button>
+    <script>
+      function changeColor(event) {
+        // 랜덤으로 가져오기
+        const r = Math.round(Math.random() * 255);
+        const g = Math.round(Math.random() * 255);
+        const b = Math.round(Math.random() * 255);
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+        event.target.removeEventListener("click", changeColor);
+      }
+
+      const btn = document.getElementsByTagName("button");
+      btn[0].addEventListener("click", changeColor);
+      //   btn[1].addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Date and Time Demo</title>
+</head>
+<body>
+<h1>Date and Time Examples</h1>
+<p>
+    Current Date:
+    <span th:text="${#temporals.format(currentDate, 'yyyy-MM-dd')}"></span>
+</p>
+<p>
+    Current DateTime:
+    <span
+            th:text="${#temporals.format(currentDateTime, 'yyyy-MM-dd HH:mm:ss')}"
+    ></span>
+</p>
+<p>
+    Current Time:
+    <span th:text="${#temporals.format(currentTime, 'HH:mm:ss')}"></span>
+</p>
+<p>
+    Current Zoned DateTime:
+    <span
+            th:text="${#temporals.format(currentZonedDateTime, 'yyyy-MM-dd HH:mm:ss zzzz')}"
+    ></span>
+</p>
+</body>
+</html>

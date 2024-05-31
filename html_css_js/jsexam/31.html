@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비동기</title>
+  </head>
+  <body>
+    <script>
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject(new Error());
+        }, 1000);
+      });
+
+      myPromise
+        .then((n) => {
+          console.log(n);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+  </head>
+  <body>
+    <div id="test" class="abc">안녕</div>
+    <input type="text" name="id" id="id" value="123" />
+    <script>
+      const obj = {};
+      console.log(typeof obj);
+
+      const dog = {
+        name: "멍멍이",
+        age: 2,
+      };
+
+      console.log(dog);
+      console.log(dog.name);
+      console.log(dog["name"]);
+
+      const ironMan = {
+        name: "토니 스타크",
+        actor: "로버트 다우니 주니어",
+        alias: "아이언맨",
+      };
+
+      const captainAmerica = {
+        name: "스티븐 로저스",
+        actor: "크리스 에반스",
+        alias: "캡틴 아메리카",
+      };
+
+      console.log(ironMan);
+      console.log(captainAmerica);
+
+      console.log(ironMan.actor);
+
+      function print(hero) {
+        const text = `${hero.alias}(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
+        console.log(text);
+      }
+
+      print(ironMan);
+      print(captainAmerica);
+
+      //객체 비구조화 할당
+
+      function print(hero) {
+        const { name, actor, alias } = hero;
+        const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+        console.log(text);
+      }
+
+      function print({ alias, name, actor }) {
+        const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+        console.log(text);
+      }
+
+      //   const dog = {
+      //     name: "멍멍이",
+      //     age: 3,
+      //   };
+
+      const { name } = dog;
+    </script>
+  </body>
+</html>

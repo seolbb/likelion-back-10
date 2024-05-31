@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array = [1, 23, 3, 45, 5, 6, 8, 7, 9];
+      const squared = [];
+
+      for (let i = 0; i < array.length; i++) {
+        squared.push(array[i] * array[i]);
+      }
+
+      console.log(squared);
+
+      const squared2 = [];
+      array.forEach((n) => squared2.push(n * n));
+
+      console.log(squared2);
+
+      const squared3 = array.map((n) => n * n);
+
+      console.log(squared3);
+    </script>
+  </body>
+</html>

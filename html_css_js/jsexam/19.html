@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로토타입</title>
+  </head>
+  <body>
+    <script>
+      function Animal(type, name, sound) {
+        this.type = type;
+        this.name = name;
+        this.sound = sound;
+      }
+
+      Animal.prototype.say = function () {
+        console.log(this.sound);
+      };
+      Animal.prototype.sharedValue = 1;
+
+      const dog = new Animal("개", "멍멍이", "멍멍");
+      const cat = new Animal("고양이", "야옹이", "야옹");
+
+      dog.say();
+      cat.say();
+
+      console.log(dog.sharedValue);
+      console.log(cat.sharedValue);
+      cat.sharedValue = 2;
+
+      //   Animal.prototype.sharedValue = 2;
+
+      console.log(dog.sharedValue);
+      console.log(cat.sharedValue);
+
+      cat.say = function () {
+        console.log("hi~~~");
+      };
+
+      cat.say();
+      dog.say();
+
+      Animal.prototype.say.call(cat);
+
+      delete cat.sharedValue;
+
+      console.log(cat.sharedValue);
+    </script>
+  </body>
+</html>
