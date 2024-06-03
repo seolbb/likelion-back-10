@@ -1,0 +1,36 @@
+### GET /todos
+GET http://localhost/api/todos
+Accept: application/json
+
+### GET /todos/{id}
+GET http://localhost/api/todos/3
+Accept: application/json
+
+### POST /todos
+POST http://localhost/api/todos
+Content-Type: application/json
+
+{
+  "todo": "New Todo Item"
+}
+
+### PATCH /todos/{id}
+PATCH http://localhost/api/todos/2
+Accept: application/json
+
+### PATCH /todos
+PATCH http://localhost/api/todos
+Content-Type: application/json
+
+{
+  "id": 2,
+  "todo" : "Update Todo"
+}
+
+### DELETE /todos
+DELETE http://localhost/api/todos
+Content-Type: application/json
+
+{
+  "id": 2
+}
